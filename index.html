@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My work profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      <div class="navbar">
+        <img src="images/logo.png" alt="Logo" class="site-logo">
+        <img src="images/profile pic.jpg" alt="MHTM Mbokazi" class="nav-profile">
+        <h1>
+          Mbokazi, Magembe Hopewell Thulebona Musa
+        </h1>
+
+        <div class="nav-right">
+          <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <button id="toggle-dark">🌓</button>
+
+        
+        </div>
+      </div>
+
+ 
+    </header>
+    <section id="About">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="image-container">
+                <img src="images/nobackg.png" alt="Profile" class="profile-pic">
+            </div>
+            <div class="about-text">
+                <p>
+                    I'm a dedicated Systems Developer with a passion for building innovative solutions that drive business success. I specialize in creating robust, scalable applications that solve real-world problems.
+                </p>
+                <p>
+                    With expertise in modern web technologies and software engineering practices, I deliver high-quality solutions that transform ideas into powerful digital products. My focus is on creating seamless user experiences backed by solid technical architecture.
+                </p>
+            </div>
+        </div>
+    
+    </section>
+
+    <section id="Skills">
+        <h2>My Services & Expertise</h2>
+        <ul>
+          <li><strong>Web Development:</strong> Full-stack web applications with HTML5, CSS3, and responsive design</li>
+          <li><strong>Frontend Development:</strong> Interactive user interfaces with JavaScript and React</li>
+          <li><strong>Backend Development:</strong> Server-side solutions with Python and modern frameworks</li>
+          <li><strong>Software Architecture:</strong> Object-oriented design and C# enterprise applications</li>
+          <li><strong>Systems Integration:</strong> Connecting and optimizing complex software systems for seamless operation</li>
+        </ul>
+    
+    </section>
+
+    <section id="portfolio">
+        <h2>Recent Projects</h2>
+        <p>Showcasing my work across various technologies and platforms:</p>
+        
+        <div class="project">
+          <div class="project-content">
+            <div class="project-image">
+              <img src="images/school-bag.jpg" alt="Project 1">
+            </div>
+            <div class="project-info">
+              <h3>Web Portfolio Platform</h3>
+              <p>A responsive portfolio website built with HTML5, CSS3, and vanilla JavaScript. Features include dark mode toggle, smooth animations, and optimized performance for all devices.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-content">
+            <div class="project-image">
+              <img src="images/back ground.jpg" alt="Project 2">
+            </div>
+            <div class="project-info">
+              <h3>React Dashboard Application</h3>
+              <p>A dynamic web application with React featuring real-time data visualization, user authentication, and state management. Demonstrates modern web development best practices and responsive UI design.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-content">
+            <div class="project-image">
+              <img src="images/standingless.png" alt="Project 3">
+            </div>
+            <div class="project-info">
+              <h3>Full-Stack System Solution</h3>
+              <p>An enterprise-level application combining Python backend, C# components, and a modern frontend. Demonstrates system integration, database optimization, and scalable architecture design.</p>
+            </div>
+          </div>
+        </div>
+      
+    </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Tel: 0606086023</p>
+        <p>Email: musambokazi2000@gmail.com</p>
+
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+        
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+        
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
+        
+            <button type="submit">Send</button>
+          </form>
+       
+      </section>
+    
+      <footer>
+        <p>&copy; 2025 Mbokazi Magembe Hopewell Thulebona Musa</p>
+      </footer>
+
+      <script>
+        const toggleBtn = document.getElementById('toggle-dark');
+        toggleBtn.addEventListener('click', () => {
+          document.body.classList.toggle('dark');
+        });
+      </script>
+      
+</body>
+</html>
