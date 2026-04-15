@@ -1,0 +1,36 @@
+How the Full Gradient Design Was Achieved
+=========================================
+
+To transform the page from having separate structured blocks into a seamless, full-gradient design, three main steps were taken:
+
+1. Applying the Main Gradients
+   Instead of giving the header and footer their own background colors, the background gradients were applied entirely to the `body` selector. We used `background-attachment: fixed` to lock the gradient stretch across the entire screen while you scroll, providing that continuous flow.
+
+2. Making Structures Transparent
+   In a blocked page, individual sections have their own solid color (e.g., white with a drop shadow). We targeted the layout selectors (`header`, `section`, `.project`, `footer`) and removed their structure by adding `background: transparent;`, `border: none;`, and `box-shadow: none;`. This effectively strips away the "block" visual, letting the main text sit directly on top of the body's gradient.
+
+3. Contrast and Text Colors
+   When you lay text over a direct gradient, contrast is extremely important. As we established the White Gradient logic for light mode and Dark Navy logic for dark mode, the section paragraph colors were tweaked so they pop out beautifully against their respective backgrounds (e.g., `#555` for light mode and `#a8b2d1` for dark mode).
+
+Sections Edited in style.css
+============================
+
+Below is the list of selectors modified to pull this layout off:
+
+- `body` and `body.dark`:
+  Added the smooth background linear gradients and text colors.
+
+- `header` and `footer`:
+  Replaced the previous distinct background gradients with `background: transparent;`, and removed their solid borders.
+
+- `section`:
+  Changed the solid white background to `background: transparent;`, wiped the box-shadow, and removed the border-radius so they blend onto the page canvas seamlessly.
+
+- `body.dark section p` / `body.dark section ul` / `body.dark .project p` / `body.dark .about-text p`:
+  Conditionally formatted the text to a soft silver (`#a8b2d1`) when dark mode triggers, preventing the text from hiding within the navy background.
+
+- `form input` / `form textarea` / `form label`:
+  Toggled background visibility to transparent and made the text `color: inherit;` so that they automatically adapt to either the light or dark format dynamically.
+
+- `.nav-profile`:
+  Adjusted border from a strictly mapped white to `currentColor` so the picture's ring frame swaps to navy or white dynamically based on the mode.
