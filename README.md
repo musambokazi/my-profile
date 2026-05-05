@@ -2,30 +2,81 @@
 
 **Systems Developer**
 
-I'm a dedicated Systems Developer with a passion for building innovative solutions that drive business success. I specialize in creating robust, scalable applications that solve real-world problems.
+A professional portfolio showcasing expertise in systems development, full-stack web applications, and software architecture. This project has been upgraded to a **full-stack system** with a dedicated database and administrative backend.
 
-With expertise in modern web technologies and software engineering practices, I deliver high-quality solutions that transform ideas into powerful digital products. My focus is on creating seamless user experiences backed by solid technical architecture.
+## 🌟 Key Features
 
-## 🛠️ Services & Expertise
+- **Dynamic Database Layer:** Integrated **SQLAlchemy** with a SQLite database to manage skills, projects, and inbound messages.
+- **Secure Authentication:** Protected administrative area using **Flask-Login** with hashed passwords for secure data management.
+- **Interactive AJAX Contact Form:** Real-time message submission using the **Fetch API**, providing instant feedback without page reloads.
+- **Admin Dashboard:** A private interface (`/admin/messages`) to view and manage contact requests from potential clients.
+- **Single-Page Scroll Experience:** Smooth, full-height sections with **CSS Scroll Snapping** for a modern, fluid user journey.
+- **Animated Scroll Reveal:** Intersection Observer logic that triggers entry animations as you explore the site.
 
-- **Web Development:** Full-stack web applications with HTML5, CSS3, and responsive design
-- **Frontend Development:** Interactive user interfaces with JavaScript and React
-- **Backend Development:** Server-side solutions with Python and modern frameworks
-- **Software Architecture:** Object-oriented design and C# enterprise applications
-- **Systems Integration:** Connecting and optimizing complex software systems for seamless operation
+## 🛠️ Tech Stack
 
-## 🚀 Recent Projects
+- **Backend:** Python, Flask, Jinja2, **Flask-SQLAlchemy**, **Flask-Login**
+- **Database:** SQLite
+- **Frontend:** HTML5, CSS3 (Glassmorphism), JavaScript (ES6+)
+- **Typography:** Outfit (Google Fonts)
 
-### Web Portfolio Platform
-A responsive portfolio website built with HTML5, CSS3, and vanilla JavaScript. Features include dark mode toggle, smooth animations, and optimized performance for all devices.
+## 📁 Project Structure
 
-### React Kasi Mashesha App (Delivery App)
-A dynamic web application with React featuring real-time data visualization, user authentication, and state management. Demonstrates modern web development best practices and responsive UI design.
+```text
+my-profile/
+├── app.py              # Application logic, Database models & Routes
+├── portfolio.db        # SQLite database file (Auto-generated)
+├── requirements.txt    # Project dependencies
+├── static/             # Static assets
+│   ├── css/
+│   │   └── style.css   # Premium glassmorphic styles
+│   └── images/         # Profile and project images
+└── templates/          # HTML Templates
+    ├── index.html      # Main landing page
+    ├── login.html      # Secure admin login portal
+    └── admin_messages.html # Private message dashboard
+```
 
-### Full-Stack System Solution
-An enterprise-level application combining Python backend, C# components, and a modern frontend. Demonstrates system integration, database optimization, and scalable architecture design.
+## 🚀 Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd my-profile
+   ```
+
+2. **Set up Virtual Environment:**
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # Linux/Mac
+   # .venv\Scripts\activate   # Windows
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the application:**
+   ```bash
+   python app.py
+   ```
+   *Note: The database and default admin user are automatically initialized on the first run.*
+
+5. **View in browser:**
+   - Public Site: [http://127.0.0.1:5000](http://127.0.0.1:5000)
+   - Admin Login: [http://127.0.0.1:5000/login](http://127.0.0.1:5000/login)
+
+## 🔐 Default Admin Credentials
+
+- **Username:** `admin`
+- **Password:** `admin123`
+*(Please ensure you change these in `app.py` before any public deployment.)*
 
 ## 📫 Contact Information
 
 - **Tel:** 0606086023
 - **Email:** [musambokazi2000@gmail.com](mailto:musambokazi2000@gmail.com)
+
+---
+© 2025 Mbokazi Magembe Hopewell Thulebona Musa
