@@ -78,17 +78,22 @@
             
             <div class="projects-container">
                 {% for project in projects %}
-                <div class="project">
-                <div class="project-content">
-                    <div class="project-image">
-                    <img src="{{ url_for('static', filename='images/' + project.image) }}" alt="{{ project.title }}">
+                <a href="{{ project.github_url if project.github_url else about.github }}" class="project-link" target="_blank" rel="noopener noreferrer">
+                    <div class="project">
+                    <div class="project-content">
+                        <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/' + project.image) }}" alt="{{ project.title }}">
+                        </div>
+                        <div class="project-info">
+                        <h3>{{ project.title }}</h3>
+                        <p>{{ project.description }}</p>
+                        <div class="project-meta">
+                            <span class="view-link">View on GitHub →</span>
+                        </div>
+                        </div>
                     </div>
-                    <div class="project-info">
-                    <h3>{{ project.title }}</h3>
-                    <p>{{ project.description }}</p>
                     </div>
-                </div>
-                </div>
+                </a>
                 {% endfor %}
             </div>
         
@@ -126,7 +131,7 @@
     </main>
     
       <footer>
-        <p>&copy; 2025 {{ about.name }}</p>
+        <p>&copy; 2025 {{ about.name }} | <a href="{{ about.github }}" target="_blank" rel="noopener noreferrer">GitHub</a></p>
       </footer>
 
       <script>

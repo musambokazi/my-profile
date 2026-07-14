@@ -33,6 +33,7 @@ class Project(db.Model):
     title = db.Column(db.String(100), nullable=False)
     description = db.Column(db.Text, nullable=False)
     image = db.Column(db.String(100), nullable=False)
+    github_url = db.Column(db.String(200), nullable=True)
 
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -47,7 +48,7 @@ def load_user(user_id):
 
 # Initial Data
 about_data = {
-    "name": "Mbokazi, Magembe Hopewell Thulebona Musa",
+    "name": "Mbokazi, Magembe H T Musa",
     "title": "Systems Developer",
     "bio": [
         "I'm a dedicated Systems Developer with a passion for building innovative solutions that drive business success. I specialize in creating robust, scalable applications that solve real-world problems.",
@@ -55,7 +56,8 @@ about_data = {
     ],
     "profile_pic": "nobackg.png",
     "nav_profile": "profile pic.jpg",
-    "logo": "logo.png"
+    "logo": "logo.png",
+    "github": "https://github.com/musambokazi"
 }
 
 def init_db():
@@ -79,9 +81,9 @@ def init_db():
         
         if Project.query.count() == 0:
             projects = [
-                Project(title="Web Portfolio Platform", image="logo.png", description="A responsive portfolio website built with HTML5, CSS3, and vanilla JavaScript."),
-                Project(title="React Kasi Mashesha App (Delivary App)", image="applogo.png", description="A dynamic web application with React featuring real-time data visualization."),
-                Project(title="Full-Stack System Solution", image="back ground.jpg", description="An enterprise-level application combining Python backend, C# components, and a modern frontend.")
+                Project(title="Web Portfolio Platform", image="logo.png", description="A responsive portfolio website built with HTML5, CSS3, and vanilla JavaScript.", github_url="https://github.com/musambokazi/my-profile"),
+                Project(title="React Kasi Mashesha App (Delivary App)", image="applogo.png", description="A dynamic web application with React featuring real-time data visualization.", github_url="https://github.com/musambokazi/kasi-mashesha"),
+                Project(title="Full-Stack System Solution", image="back ground.jpg", description="An enterprise-level application combining Python backend, C# components, and a modern frontend.", github_url="https://github.com/musambokazi/enterprise-solution")
             ]
             db.session.bulk_save_objects(projects)
         

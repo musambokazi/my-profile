@@ -278,6 +278,13 @@ nav a {
     width: 100%;
   }
 
+  .project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+
   .project {
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
@@ -333,6 +340,25 @@ nav a {
   .project p {
     color: #555;
     line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .view-link {
+    display: inline-block;
+    color: #667eea;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .project:hover .view-link {
+    transform: translateX(5px);
+    color: #764ba2;
+  }
+
+  body.dark .view-link {
+    color: #64ffda;
   }
   
   /* Footer */
@@ -345,6 +371,22 @@ nav a {
     margin-top: 50px;
     box-shadow: none;
     border: none;
+  }
+
+  footer a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  footer a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+  }
+
+  body.dark footer a {
+    color: #64ffda;
   }
 
   .image-container {
