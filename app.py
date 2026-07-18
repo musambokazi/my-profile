@@ -48,11 +48,11 @@ def load_user(user_id):
 
 # Initial Data
 about_data = {
-    "name": "Mbokazi, Magembe H T Musa",
-    "title": "Systems Developer",
+    "name": "Magembe H T Musa",
+    "title": "Junior Systems Developer & Aspiring Software Engineer",
     "bio": [
-        "I'm a dedicated Systems Developer with a passion for building innovative solutions that drive business success. I specialize in creating robust, scalable applications that solve real-world problems.",
-        "With expertise in modern web technologies and software engineering practices, I deliver high-quality solutions that transform ideas into powerful digital products."
+        "I am a dedicated Junior Systems Developer with a passion for software engineering. I combine a strong foundation in building robust, scalable systems with a continuous drive to master the latest technologies.",
+        "As an aspiring software engineer, I am committed to delivering high-quality, innovative digital solutions. I focus on creating efficient web platforms and integrated systems that solve real-world business challenges with reliability and precision."
     ],
     "profile_pic": "nobackg.png",
     "nav_profile": "profile pic.jpg",
